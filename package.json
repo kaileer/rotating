@@ -1,0 +1,56 @@
+{
+  "name": "choujiang",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve --mode dev",
+    "test": "vue-cli-service serve --mode test",
+    "uat": "vue-cli-service serve --mode uat",
+    "lint": "vue-cli-service serve --mode lint",
+    "build-dev": "vue-cli-service build --mode dev && node util/jsCopy.js && node util/cssCopy.js && node util/htmlReplace.js",
+    "build-test": "vue-cli-service build --mode test && node util/jsCopy.js && node util/cssCopy.js && node util/htmlReplace.js",
+    "build-uat": "vue-cli-service build --mode uat && node util/jsCopy.js && node util/cssCopy.js && node util/htmlReplace.js",
+    "build-lint": "vue-cli-service build --mode lint && node util/jsCopy.js && node util/cssCopy.js && node util/htmlReplace.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "weixin-jsapi": "^1.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.7.0",
+    "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-service": "^3.7.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
